@@ -45,8 +45,8 @@ eureka:
 
 # 其它属性定义
 tim:
-  configVal: configVal-git
-  defConfigVal: defConfigVal-git
+  configVal: configVal-root-git
+  defConfigVal: defConfigVal-root-git
 
 jwt:
   token-header: Authorization
