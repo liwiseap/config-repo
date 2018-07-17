@@ -24,13 +24,10 @@ zuul:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
   routes:
-#    api-a:
-#      path: /operation/**
-#      serviceId: operation-system
-#      strip-prefix: false
     operation:
       path: /operation/**
-      url: http://127.0.0.1:8080/
+      serviceId: operation-system
+#      url: http://127.0.0.1:8080/
       strip-prefix: false
 
 ribbon:
@@ -59,3 +56,17 @@ hystrix:
           thread:
             timeoutInMilliseconds: 50000
           strategy: SEMAPHORE
+
+#安全配置
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+
+feign:
+  hystrix:
+    enabled: false
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
