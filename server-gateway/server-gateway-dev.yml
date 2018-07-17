@@ -1,3 +1,5 @@
+from: server-config-server-gateway-dev
+
 server:
   port: 8762
 
@@ -28,7 +30,7 @@ zuul:
 #      strip-prefix: false
     operation:
       path: /operation/**
-      url: http://192.168.5.44:8080/
+      url: http://127.0.0.1:8080/
       strip-prefix: false
 
 ribbon:
